@@ -5,20 +5,20 @@ const Schema = mongoose.Schema;
 const horario = new Schema({
     salaoId: {
         type: mongoose.Types.ObjectId,
-        red: 'Salao',
+        ref: 'Salao',
         required: true,
     },
     especialidades: [
         {
             type: mongoose.Types.ObjectId,
-            red: 'Servico',
+            ref: 'Servico',
             required: true,
         }
     ],
     colaboradores: [
         {
             type: mongoose.Types.ObjectId,
-            red: 'Colaborador',
+            ref: 'Colaborador',
             required: true,
         }
     ],
